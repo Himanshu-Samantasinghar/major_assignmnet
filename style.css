@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+body{
+    font-family: "Caveat", cursive;
+    background: url('https://wallpapers.com/images/hd/water-surface-aesthetic-dark-blue-hd-3tayyq269jdtz2aq.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow:0px 0px 5px 5px whitesmoke;
+    padding: 40px;
+    text-align: center;
+    width: 350px;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-box input{
+    border: 2px solid blue;
+    border-radius: 8px 0 0 8px;
+    padding: 10px;
+    width: 70%;
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.search-box input:hover{
+    outline: none;
+    box-shadow: 0 0 5px blue;
+}
+
+.search-box button{
+    background: blue;
+    border-radius:0px 8px 8px 0px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover{
+    box-shadow: 0 0 5px blue;
+}
+#loader{
+    border: 4px solid #f3f3f3;
+    border-top:4px solid #3498db;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+    /* align-items: center; */
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.weather-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+.weather-icon i{
+    margin: 0 10px;
+    display: none;
+}
+
+#temperature{
+    font-size: 24px;
+    margin: 20px 0;
+    color: #333;
+    text-shadow: 1px 1px 2px black;
+    position: relative;
+}
+
+#temperature::before{
+    content: "\f2c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 3rem;
+    top: 0;
+    font-size: 24px;
+    color: #ffcc00;
+    animation: flash 1s linear infinite;
+}
+
+#description, #humidity, #wind{
+    margin: 10px 0;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    font-size: 18px;
+    position: relative;
+}
+
+#humidity::before{
+    content: "\f043";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 6rem;
+    top: 0;
+    font-size: 24px;
+    color: #00aaff;
+    animation: flash 1s linear infinite;
+}
+
+.wind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wind i{
+    margin-left: 10px;
+}
+
+.date-time{
+    margin-top: 20px;
+}
+
+.date-time p{
+    margin: 5px 0;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(28, 26, 26);
+    font-size: 18px;
+    position: relative;
+}
+
+.date-time i{
+    margin-right: 10px;
+}
+
+.fas.fa-sun{
+    color: #ffd700;
+    animation: rotate 10s linear infinite;
+}
+.fas.fa-moon{
+    color: #ffd700;
+    animation: rotate 10s linear infinite;
+}
+.fas.fa-cloud{
+    color: #ffd700;
+    animation: float 6s ease-in-out infinite;
+}
+.fas.fa-cloud-rain{
+    color: #ffd700;
+    animation: float 6s ease-in-out infinite, rain 3s linear infinite;
+}
+.fas.fa-bolt{
+    color: #ffd700;
+    animation: flash 1s linear infinite;
+}
+.fas.fa-wind{
+    color: #ffd700;
+    animation: blow 3s linear infinite;
+}
+.fas.fa-snowflake{
+    color: #ffd700;
+    animation: float 6s ease-in-out infinite, snowe 5s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+@keyframes flash {
+    0%, 50%, 100%{
+        opacity: 1;
+    }
+    25%, 75%{
+        opacity:0;
+    }
+}
+@keyframes blow {
+    0%, 100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform:translateX(-10px);
+    }
+}
+@keyframes rain {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform:translateY(20px);
+    }
+}
+@keyframes snowe{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform:translateY(20px);
+    }
+}

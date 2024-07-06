@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-box">
+            <input type="text" id="city" placeholder="Enter city name">
+            <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="loader" class="loader" style="display: none;"></div>
+        <div id="weather" style="display: none;">
+            <h2 id="city-name"></h2>
+            <div class="weather-icon" id="weather-icon">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-cloud"></i>
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-cloud-rain"></i>
+                <i class="fas fa-snowflake"></i>
+                <i class="fas fa-bolt"></i>
+                <i class="fas fa-wind"></i>
+            </div>
+            <p id="temperature"><i class="fas fa-thermometer-half"></i> <span id="temp-value"></span></p>
+            <p id="description"></p>
+            <p id="humidity"><i class="fas fa-tint"></i> <span id="humidity-value"></span></p>
+            <div class="wind">
+                <i class="fas fa-wind"></i>
+                <p id="wind"></p>
+            </div>
+            <div class="date-time">
+                <p id="current-date"><i class="fas fa-calendar-day"></i> <span id="date-value"></span></p>
+                <p id="current-time"><i class="fas fa-clock"></i> <span id="time-value"></span></p>
+                <p id="current-year"><i class="fas fa-calendar-alt"></i> <span id="year-value"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
